@@ -1,16 +1,20 @@
 
-
+//All you need is the LiquidCrystal library https://www.arduino.cc/en/Reference/LiquidCrystal
 #include <LiquidCrystal.h>
 
-LiquidCrystal lcd(7,8,9,10,11,12);
+//Set your pins
+LiquidCrystal lcd(7,8,9,10,11,12);  
 
-String inputString = "";         // a string to hold incoming data
-String firstString = ""; 
+//Strings to hold incoming data
+String inputString = "";
+String firstString = "";
 String secondString = "";
 String thirdString = "";
-String fourthString = ""; 
-String fifthString = ""; 
-boolean stringComplete = false;  // whether the string is complete
+String fourthString = "";
+String fifthString = "";
+
+//I know very ugly implementation
+boolean stringComplete = false;  
 boolean firstComplete = false;
 boolean secondComplete = false;
 boolean thirdComplete = false;
@@ -19,15 +23,15 @@ boolean fifthComplete = false;
 
 void setup() {
 
-// set up the LCD's number of columns and rows:
+  //Set up the LCD
   lcd.begin(20, 4);
-  // Print a message to the LCD.
-  
-  
+
   // initialize serial:
   Serial.begin(9600);
+
   // reserve 200 bytes for the inputString:
   inputString.reserve(200);
+
 }
 
 void loop() {
@@ -39,7 +43,6 @@ void loop() {
     stringComplete = false;
   }
 
-  
 
 }
 
